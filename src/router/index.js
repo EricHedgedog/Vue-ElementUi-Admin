@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-var Login
+var Login, Home, Article
+Home = (resolve) => require(['@/views/layout/home'], resolve)
 Login = (resolve) => require(['@/views/login'], resolve)
+Article = (resolve) => require(['@/views/articles'], resolve)
 
 Vue.use(Router)
 Vue.use(ElementUI)
@@ -18,6 +20,18 @@ const constRouterMap = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home,
+    children: [
+      {
+        path: '/articles',
+        name: 'Article',
+        component: Article
+      }
+    ]
   }
 ]
 

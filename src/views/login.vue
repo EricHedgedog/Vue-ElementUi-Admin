@@ -3,7 +3,7 @@
     <div class="login-top">Admin System</div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span>登&nbsp;&nbsp;录</span>
+        <span>用户登录</span>
       </div>
       <div class="login-area">
         <el-form :model="loginForm" :rules="rules" ref="loginForm" label-width="70px" class="demo-ruleForm">
@@ -15,7 +15,7 @@
           </el-form-item>
         </el-form>
         <el-form>
-          <el-button type="primary">操作按钮</el-button>
+          <el-button type="primary">登录</el-button>
         </el-form>
       </div>
     </el-card>
