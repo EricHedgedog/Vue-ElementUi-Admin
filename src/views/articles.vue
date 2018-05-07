@@ -12,12 +12,16 @@
       </el-table-column>
       <el-table-column
         prop="name"
-        label="标题"
-        width="180">
+        label="标题">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="评论">
+      align="center"
+        label="操作">
+        <template slot-scope="scope">
+          <el-button type="success">发布</el-button>
+          <el-button type="primary">修改</el-button>
+          <el-button type="danger">删除</el-button>
+        </template>
       </el-table-column>
     </el-table>
     <div class="pagination">
